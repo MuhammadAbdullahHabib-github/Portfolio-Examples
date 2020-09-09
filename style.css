@@ -12,6 +12,8 @@
     --secondaryText:#4b5156;
 
     --themeDotBorder: #24292e;
+
+    --previerBackGround:rgb(251,249,243,0.8)
 }
 
 html , body {
@@ -203,5 +205,48 @@ ul {
 
 .right-column {
     grid-area: right-column;
+    display: grid;
+    align-items: center;
 }
 
+#preview {
+    width: 300px;
+    border: 1.5px solid #17a2b8;
+    background-color: var(--previerBackGround);
+    padding: 10px;
+    position: relative;
+}
+
+#corner-tl{
+    top:-5px;
+    left: -5px;
+}
+#corner-tr{ 
+    top:-5px;
+    right: -5px;
+}
+
+#corner-bl{
+    bottom: -5px;
+    left: -5px;
+}
+
+#corner-br{
+    bottom: -5px;
+    right: -5px;
+}
+
+.corner {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1.5px solid #17a2b8;
+    background-color: #fff;
+    position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+    .main-container {
+        width: 95%;
+    }
+}
